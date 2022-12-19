@@ -1,0 +1,29 @@
+{% extends "AppMaquinaria/padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+
+    <h1 class="mb-5">BUSQUEDA DE COSECHADORA</h1>
+
+{% endblock %}
+
+{% block contenido %}
+
+    {% if cosechadoras %}
+
+        <h2>LISTADO DE COSECHADORAS</h2>
+
+        {% for cosechadora in cosechadoras %}
+
+            <h3>{{ cosechadora.marca }} - {{ cosechadora.modelo }} - {{ cosechadora.plataforma }} - {{ cosechadora.anio }}</h3>
+
+        {% endfor %}
+
+    {% else %}
+
+        <h2>NO HAY COSECHADORA</h2>
+
+    {% endif %}
+
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends "AppMaquinaria/padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+
+<h1 class="mb-5">BUSQUEDA DE COSECHADORAS</h1>
+
+{% endblock %}
+
+{% block contenido %}
+
+{{ mensaje }}
+
+<form action="{% url 'buscar' %}" method="GET"> 
+
+    <input type="text" name="marca" id="marca" placeholder="Ingrese marca">
+    <input type="submit" value="Buscar cosechadora">
+
+</form>
+
+
+{% endblock %}
+

@@ -1,0 +1,28 @@
+{% extends "AppMaquinaria/padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+
+<h1 class="mb-5">FORMULARIO DE APEROS</h1>
+
+{% endblock %}
+
+{% block contenido %}
+
+{{ mensaje }}
+
+<form action="{% url 'aperoFormulario' %}" method="POST"> {% csrf_token %}
+    
+    <table>
+
+        {{form.as_table}}
+
+    </table>
+
+    <input type="submit" value="Guardar Apero">
+</form>
+
+
+{% endblock %}
+

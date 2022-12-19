@@ -1,0 +1,28 @@
+{% extends "AppMaquinaria/padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+
+<h1 class="mb-5">FORMULARIO DE TRACTORES</h1>
+
+{% endblock %}
+
+{% block contenido %}
+
+{{ mensaje }}
+
+<form action="{% url 'tractorFormulario' %}" method="POST"> {% csrf_token %}
+    
+    <table>
+
+        {{form.as_table}}
+
+    </table>
+
+    <input type="submit" value="Guardar Tractor">
+</form>
+
+
+{% endblock %}
+
